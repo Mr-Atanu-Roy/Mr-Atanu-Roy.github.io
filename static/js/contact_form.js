@@ -36,7 +36,7 @@ try{
     
                     // Send the data using post
                     //setting the url
-                    var url = "./api/contact_form.php";
+                    var url = "https://atanuroy.sbcare.in/api/contact_form.php";
     
                     // Create an options object for the fetch request
                     var requestOptions = {
