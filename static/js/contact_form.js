@@ -49,7 +49,6 @@ try{
                     // Send the POST request
                     fetch(url, requestOptions)
                     .then(response => {
-                        console.log(response);
                         if (response.status == 405) {
                             formSubmitBtn.innerHTML = FormSubmitBtnContent; 
 
@@ -77,7 +76,6 @@ try{
                                 document.getElementById('closeContactBtn').style.display = "block";
                             }else{
                                 formSubmitBtn.innerHTML = FormSubmitBtnContent; 
-                                console.log(data)
                                 //error
                                 window.alert(`Error: ${data["error"]}... \n${data["message"]}`);
                             }
