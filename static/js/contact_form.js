@@ -49,6 +49,7 @@ try{
                     // Send the POST request
                     fetch(url, requestOptions)
                     .then(response => {
+                        console.log(response);
                         if (response.status == 405) {
                             formSubmitBtn.innerHTML = FormSubmitBtnContent; 
 
