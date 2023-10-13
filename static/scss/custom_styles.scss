@@ -48,6 +48,15 @@ body {
   }
 }
 
+//pageclip form success styles update
+.pageclip-form__success{
+  background: $bg-dark !important;
+  .pageclip-form__success__message{
+    font-family: "Google Sans Mono Bold" !important;
+    color: $purple !important;
+  }
+}
+
 //experience box timeline styles
 .experience-box {
   position: relative;

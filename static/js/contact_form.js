@@ -1,3 +1,69 @@
+// func to validate name
+let validateName = (name) => {
+    const nameRegex = /^[A-Za-z\s\-']+$/;
+
+    try {
+
+        if(name != "" && name.length > 2){ //check if name is empty and has valid length
+            if (nameRegex.test(name)) { //match with the regex
+                //valid name
+                return true;
+            }
+        }
+               
+    } catch (error) {
+        console.log("Error "+error);
+    }
+
+    return false;
+
+}
+
+// func to validate email 
+let validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    try {
+
+        if(email != ""){ //check if email is empty
+            if (emailRegex.test(email)) { //match with the regex
+                //valid email
+                return true;
+            }
+        }
+               
+    } catch (error) {
+        console.log("Error "+error);
+    }
+
+    return false;
+}
+
+// func to validate phone number
+let validatePhone = (phone, blank=false) => {
+    const phoneRegex = /^\d{10}$/;
+
+    try {
+
+        if(blank == true && phone == ""){ //check if phone is empty and blank is true (for optional field)
+            return true;
+        }
+
+        if(phone != ""){ //check if phone is empty
+            if (phoneRegex.test(phone)) { //match with the regex
+                //valid phone
+                return true;
+            }
+        }
+               
+    } catch (error) {
+        console.log("Error "+error);
+    }
+
+    return false;
+}
+
+
 try{ 
     //contact me form
     var form = document.getElementById("contactForm");
@@ -21,86 +87,56 @@ try{
         var message = data.get('message').trim();
 
         //validating the data
-        if(message.length > 10){
-            if(message.length < 450){
-                if(validateName(name) && validateEmail(email) && validatePhone(phone, blank=true)){
-                    //valid data
-                    // Convert the to a JSON string
-                    var jsonData = JSON.stringify({
+        if(validateName(name) && validateEmail(email) && validatePhone(phone, blank=true)){
+            //validate message
+            if(message.length > 10){
+                if(message.length < 450){
+            
+                    var contactFormData = {
                         name: name,
                         email: email,
                         phone: phone,
                         country: country,
                         message: message
-                    });
-    
-                    // Send the data using post
-                    //setting the url
-                    var url = "https://atanuroy.sbcare.in/api/contact_form.php";
-    
-                    // Create an options object for the fetch request
-                    var requestOptions = {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: jsonData
                     };
-                    // Send the POST request
-                    fetch(url, requestOptions)
-                    .then(response => {
-                        if (response.status == 405) {
+    
+                    // Submit form using pageclip 
+                    Pageclip.send('xOvO19qYNv6JtHECcq060hSxyq3JDD7T', 'contact', contactFormData, function (error, response) {
+                        if(response["data"] == "ok" && error == null){
+                            window.alert(`Your response has been recorded. \nI will get back to you soon.`);
                             formSubmitBtn.innerHTML = FormSubmitBtnContent; 
 
-                            window.alert(`Error Occurred: Network response was NOT OK. \nTry again later.`);
-                            return null;
+                            form.reset();
+                                
+                            //sliding down the contact me form
+                            let container = document.getElementById('contactMeContainer');
+                            
+                            container.style.boxShadow = "0 0 145px -35px rgb(168,126,250)";
+                            container.style.bottom = window.innerWidth > 768 ? "-13.55rem" : "-24rem";
+                            document.getElementById('contactMeContainerOpenerBtn').style.display = "none";
+                            document.getElementById('closeContactBtn').style.display = "block";
                         }else{
-                            return response.json(); // Parse the response body as JSON
+                            console.log(error);
+                            window.alert(`Failed to submit your record. \nTry again later.`);
+                            formSubmitBtn.innerHTML = FormSubmitBtnContent; 
                         }
                     })
-                    .then(data => {
-                        // Handle the JSON response data
-                        if(data != null){
-                            if(data["status"] == 201 && data["message"] == "Record added" && data["error"] == null){
-                                formSubmitBtn.innerHTML = FormSubmitBtnContent; 
-                                //success
-                                window.alert(`Your response has been recorded. \nI will get back to you soon.`);
-                                form.reset();
-                                
-                                //sliding down the contact me form
-                                let container = document.getElementById('contactMeContainer');
-                                
-                                container.style.boxShadow = "0 0 145px -35px rgb(168,126,250)";
-                                container.style.bottom = window.innerWidth > 768 ? "-13.55rem" : "-24rem";
-                                document.getElementById('contactMeContainerOpenerBtn').style.display = "none";
-                                document.getElementById('closeContactBtn').style.display = "block";
-                            }else{
-                                formSubmitBtn.innerHTML = FormSubmitBtnContent; 
-                                //error
-                                window.alert(`Error: ${data["error"]}... \n${data["message"]}`);
-                            }
-                        }
-                    })
-                    .catch(error => {
-                        formSubmitBtn.innerHTML = FormSubmitBtnContent; 
-                        console.log("Error: "+error)
-                        // Handle errors
-                        window.alert(`Some error occurred. \nTry again later.`);
-                    });
+                    
                 }else{
                     formSubmitBtn.innerHTML = FormSubmitBtnContent; 
-                    //invalid data
-                    window.alert(`Invalid Data. \nPlease check the data you have entered.`)
+                    //invalid message
+                    window.alert("Message too long...")
                 }
             }else{
                 formSubmitBtn.innerHTML = FormSubmitBtnContent; 
                 //invalid message
-                window.alert("Message too long...")
+                window.alert("Message too short...")
             }
+
         }else{
             formSubmitBtn.innerHTML = FormSubmitBtnContent; 
-            //invalid message
-            window.alert("Message too short...")
+            //invalid data
+            window.alert(`Invalid Data. \nPlease check the data you have entered.`)
         }
 
    });

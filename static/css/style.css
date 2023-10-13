@@ -1528,12 +1528,16 @@ video {
     right: 2rem;
   }
 
-  .xs\:top-28{
-    top: 7rem;
+  .xs\:top-0{
+    top: 0px;
   }
 
   .xs\:top-\[14\%\]{
     top: 14%;
+  }
+
+  .xs\:top-28{
+    top: 7rem;
   }
 
   .xs\:m-0{
