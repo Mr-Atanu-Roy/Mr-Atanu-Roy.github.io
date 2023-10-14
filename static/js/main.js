@@ -10,14 +10,18 @@ try {
     mirror: false,
   });
 
-  //removing and adding scroll animation for education boxes
+  //removing and adding scroll animation for education boxes and hero slide down btn
   if (window.innerWidth <= 770) {
+    //getting the slide down btn
+    let slideDownBtn = document.getElementById("hero-slide-arrow");
+    slideDownBtn.setAttribute("data-offset", "0");
+    element.setAttribute("data-delay", "0");
+
     //getting the .left education boxes
-    var leftBoxes = document.querySelectorAll(".left .content");
+    let leftBoxes = document.querySelectorAll(".left .content");
 
     leftBoxes.forEach(element => {
       if (element.hasAttribute("data-aos")) {
-        console.log("SET")
         // Modify the data-aos attribute
         element.setAttribute("data-aos", "fade-left");
       }

@@ -57,6 +57,15 @@ body {
   }
 }
 
+
+
+//expertise box styles to make header btn appear over them
+.expertise-box {
+  div{
+    z-index: -9999999999999999 !important;
+  }
+}
+
 //experience box timeline styles
 .experience-box {
   position: relative;

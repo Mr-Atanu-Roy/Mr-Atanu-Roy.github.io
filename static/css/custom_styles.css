@@ -39,6 +39,10 @@ body {
   color: #a87efa !important;
 }
 
+.expertise-box div {
+  z-index: -10000000000000000 !important;
+}
+
 .experience-box {
   position: relative;
   top: 0;
