@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 /*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -681,9 +681,9 @@ video {
   margin-right: 0.375rem;
 }
 
-.mx-3{
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mx-auto{
@@ -1470,11 +1470,6 @@ video {
 .hover\:text-purple:hover{
   --tw-text-opacity: 1;
   color: rgb(168 126 250 / var(--tw-text-opacity));
-}
-
-.hover\:text-yellow:hover{
-  --tw-text-opacity: 1;
-  color: rgb(254 194 111 / var(--tw-text-opacity));
 }
 
 @media (min-width: 360px){
