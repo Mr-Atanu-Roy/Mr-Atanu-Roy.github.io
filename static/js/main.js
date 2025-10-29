@@ -45,24 +45,17 @@ try {
         }
     );
     particlesJS.load(
-        "experience",
+        "works",
         "./static/js/particlesjs-config.json",
         function () {
             console.log("particles.js config loaded-3");
         }
     );
     particlesJS.load(
-        "works",
-        "./static/js/particlesjs-config.json",
-        function () {
-            console.log("particles.js config loaded-4");
-        }
-    );
-    particlesJS.load(
         "education",
         "./static/js/particlesjs-config.json",
         function () {
-            console.log("particles.js config loaded-5");
+            console.log("particles.js config loaded-4");
         }
     );
 } catch (error) {
@@ -106,7 +99,9 @@ try {
     var typed3 = new Typed("#typing3", {
         strings: [
             '<span class="text-yellow">smart</span> engineer',
-            '<span class="text-blue">modern</span> web developer',
+            '<span class="text-green">modern</span> web developer',
+            '<span class="text-yellow">ML</span> enthusiast',
+            '<span class="text-blue">AI</span> explorer',
             '<span class="text-green">creative</span> designer',
         ],
         typeSpeed: 100,
