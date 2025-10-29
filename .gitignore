@@ -1,7 +1,11 @@
 # Ignore environment file
 *.env
-# Ignore tailwind config file
-*tailwind.config.js
+
+# Ignore node modules
+/node_modules/
+
+# Ignore package lock file
+package-lock.json
 
 # Ignore database files
 *.sqlite3
