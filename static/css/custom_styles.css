@@ -59,7 +59,7 @@ body {
     left: 1.2rem;
 }
 
-/* @keyframes arrow_animations {
+@keyframes arrow_animations {
     0% {
         transform: translateY(0);
     }
@@ -69,13 +69,13 @@ body {
     100% {
         transform: translateY(0);
     }
-} */
-/* #hero-slide-arrow img,
+}
+#hero-slide-arrow img,
 #scrollTopBtn img {
     rotate: 180deg;
     animation: arrow_animations 1.8s infinite;
-  animation-delay: 0.8s;
-} */
+    animation-delay: 0.8s;
+}
 
 body::-webkit-scrollbar {
     width: 8px;
