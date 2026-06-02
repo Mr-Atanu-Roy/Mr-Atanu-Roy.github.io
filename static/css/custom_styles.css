@@ -279,3 +279,27 @@ body::-webkit-scrollbar-thumb {
         width: 31px;
     }
 } /*# sourceMappingURL=custom_styles.css.map */
+
+@keyframes erratic-orbit {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(100deg); }
+    50% { transform: rotate(150deg); }
+    70% { transform: rotate(280deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes erratic-orbit-reverse {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(-120deg); }
+    60% { transform: rotate(-160deg); }
+    80% { transform: rotate(-300deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+.animate-erratic-orbit {
+    animation: erratic-orbit 12s linear infinite;
+}
+
+.animate-erratic-orbit-reverse {
+    animation: erratic-orbit-reverse 15s linear infinite;
+}

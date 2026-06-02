@@ -62,31 +62,151 @@
 </head>
 
 <body>
-    <header class="sm:fixed top-0 left-0 bg-none p-5 lg:p-7 flex items- justify-between w-full">
-        <a href="/" class="text-2xl font-bold">Atanu<span class="text-blue text-5xl relative -left-1.5">.</span></a>
+    <header class="sm:fixed top-0 left-0 bg-none p-5 lg:p-7 flex items-center justify-between w-full z-[60]">
+        <a href="/" class="text-2xl font-bold hover:text-white transition-colors duration-300 outlne-none">Atanu<span
+                class="text-blue hover:text-blue text-5xl relative -left-1.5">.</span></a>
 
-        <div class="flex items-center justify-center z-50">
-            <a data-aos="fade-down" data-aos-delay="150" href="#works"
-                class="hidden sm:inline-block mr-3 py-2.5 px-3.5 text-xs font-light bg-none capitalize border shadow-none bg-bgColor border-purple md:hover:shadow-[0_1px_20px_0.5px_rgb(168,126,250)] lg:mr-4 lg:py-3 lg:px-4 lg:text-sm rounded-full cursor-pointer transition-all duration-500">Explore
-                my works</a>
+        <nav data-aos="fade-down" data-aos-delay="150"
+            class="hidden md:flex items-center justify-center z-50 bg-[#1A222C]/90 border border-[#2D3748] rounded-full px-2 py-2 shadow-lg backdrop-blur-sm">
+            <ul class="flex items-center text-sm font-light text-gray">
+                <li><a href="#hero"
+                        class="px-3.5 py-2 hover:text-white transition-colors duration-300 capitalize">Home</a>
+                </li>
+                <li><a href="#about"
+                        class="px-3.5 py-2 hover:text-white transition-colors duration-300 capitalize">About</a>
+                </li>
+                <li><a href="#works"
+                        class="px-3.5 py-2 hover:text-white transition-colors duration-300 capitalize">Works</a>
+                </li>
+                <li><a href="#blogs"
+                        class="px-3.5 py-2 hover:text-white transition-colors duration-300 capitalize">Blogs</a>
+                </li>
+                <li>
+                    <a href="#" id="header-contactMe-btn"
+                        class="ml-2 px-3 py-1.5 bg-purple hover:bg-white text-black rounded-full transition-colors duration-300 font-normal flex items-center capitalize">Contact
+                        me</a>
+                </li>
+            </ul>
 
-            <button data-aos="fade-down" data-aos-delay="350" id="header-contactMe-btn"
-                class="flex items-center justify-center font-light bg-purple text-black py-1.5 sm:py-1 px-2 sm:px-3.5 lg:py-2 lg:px-5 rounded-full cursor-pointer hover:bg-white transition-colors duration-300 animate_arrow text-xs sm:text-sm lg:text-base">
-                <span>Contact Me</span>
-                <img src="./static/images/icons/squiggly-arrow_black.png"
-                    class="relative top-0 left-0 w-7 sm:w-9 md:w-10 rotate-90 ml-1 transition-all duration-200"
-                    alt="" />
+            <div class="w-[1px] h-5 bg-[#2D3748] mx-3"></div>
+
+            <div class="flex items-center gap-3 pr-2 text-gray">
+                <a href="https://github.com/Mr-Atanu-Roy" target="_blank"
+                    class="hover:text-white transition-colors duration-300 flex items-center">
+                    <i class="fa fa-github text-[18px]"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mr-atanu-roy/" target="_blank"
+                    class="hover:text-white transition-colors duration-300 flex items-center">
+                    <i class="fa fa-linkedin-square text-[18px]"></i>
+                </a>
+                <a href="https://medium.com/@ar1995487" target="_blank"
+                    class="hover:text-white transition-colors duration-300 flex items-center">
+                    <i class="fa fa-medium text-[18px]"></i>
+                </a>
+            </div>
+        </nav>
+
+        <button onclick="toggleMobileMenu()"
+            class="md:hidden flex flex-col items-center justify-center w-11 h-11 bg-[#1A222C]/80 rounded-full border border-darkGray/50 gap-[4px] cursor-pointer hover:bg-darkGray/30 transition-colors z-[60] backdrop-blur-sm">
+            <span class="w-[18px] h-[2px] bg-gray rounded-full"></span>
+            <span class="w-[18px] h-[2px] bg-gray rounded-full"></span>
+            <span class="w-[18px] h-[2px] bg-gray rounded-full"></span>
+        </button>
+    </header>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#10171F] z-[100] flex flex-col opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
+        <div class="p-5 lg:p-7 flex items-center justify-between w-full">
+            <a href="/" onclick="toggleMobileMenu()"
+                class="text-2xl font-bold hover:text-white transition-colors duration-300">Atanu<span
+                    class="text-blue hover:text-blue text-5xl relative -left-1.5">.</span></a>
+
+            <button onclick="toggleMobileMenu()"
+                class="flex items-center justify-center w-11 h-11 bg-[#1A222C]/80 rounded-full border border-darkGray/50 cursor-pointer hover:bg-darkGray/30 transition-colors">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" class="text-gray">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
             </button>
         </div>
-    </header>
+
+        <div class="flex-1 flex flex-col items-center justify-center mb-24">
+            <ul class="flex flex-col items-center justify-center gap-7 text-2xl font-bold text-white">
+                <li><a href="#hero" class="hover:text-purple transition-colors" onclick="toggleMobileMenu()">Home</a>
+                </li>
+                <li><a href="#about" class="hover:text-purple transition-colors" onclick="toggleMobileMenu()">About</a>
+                </li>
+                <li><a href="#works" class="hover:text-purple transition-colors" onclick="toggleMobileMenu()">Works</a>
+                </li>
+                <li><a href="#blogs" class="hover:text-purple transition-colors" onclick="toggleMobileMenu()">Blogs</a>
+                </li>
+                <li class="mt-4">
+                    <a href="#" onclick="toggleMobileMenu(); document.getElementById('header-contactMe-btn').click();"
+                        class="px-7 py-2.5 bg-purple text-black rounded-full font-normal hover:bg-white transition-colors text-xl">Contact
+                        me</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <div class="w-8 h-[1px] bg-darkGray mb-7"></div>
+            <div class="flex items-center gap-6 text-gray">
+                <a href="https://github.com/Mr-Atanu-Roy" target="_blank"
+                    class="hover:text-white transition-colors text-xl"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mr-atanu-roy/" target="_blank"
+                    class="hover:text-white transition-colors text-xl"><i class="fa fa-linkedin-square"></i></a>
+                <a href="https://medium.com/@ar1995487" target="_blank"
+                    class="hover:text-white transition-colors text-xl"><i class="fa fa-medium"></i></a>
+            </div>
+        </div>
+    </div>
 
     <main class="px-5 sm:p-8 md:px-12 lg:px-16 2xl:px-24">
         <section id="hero" class="mb-16 h-screen w-full">
             <div class="text-center relative top-[11%] xs:top-[14%] left-0">
-                <div class="flex items-center justify-center mb-4">
-                    <div class="w-36 -h-36" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="./static/images/me/atanu.jpg" alt="Atanu Roy"
-                            class="w-full rounded-full shadow-[0_1px_85px_-28px_rgb(168,126,250)]" loading="lazy" />
+                <div class="flex items-center justify-center mb-10 mt-4 sm:mt-0 relative">
+                    <div class="relative w-44 h-44 sm:w-52 sm:h-52 flex items-center justify-center" data-aos="zoom-in"
+                        data-aos-delay="100">
+                        <!-- Orbit 1 (Outer) -->
+                        <div class="absolute inset-[-1.5rem] sm:inset-[-2rem] rounded-full border border-darkGray/30">
+                            <!-- Green dot bottom right (Stationary + Breathing) -->
+                            <div
+                                class="absolute bottom-[10%] right-[15%] w-3.5 h-3.5 sm:w-4 sm:h-4 bg-green rounded-full shadow-[0_0_10px_rgb(22,185,119)] animate-pulse">
+                            </div>
+
+                            <!-- Spinning container for Orbit 1 dots -->
+                            <div class="absolute inset-0 rounded-full animate-erratic-orbit">
+                                <!-- Yellow dot top -->
+                                <div
+                                    class="absolute top-[5%] left-[65%] w-2.5 h-2.5 sm:w-3 sm:h-3 bg-yellow rounded-full shadow-[0_0_10px_rgb(254,194,111)]">
+                                </div>
+                                <!-- Purple dot bottom left -->
+                                <div
+                                    class="absolute -bottom-1.5 sm:-bottom-2 left-[30%] w-2 h-2 sm:w-2.5 sm:h-2.5 bg-purple rounded-full shadow-[0_0_10px_rgb(168,126,250)]">
+                                </div>
+                                <!-- Extra small yellow dot left -->
+                                <div class="absolute top-[60%] -left-1 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-yellow rounded-full shadow-[0_0_8px_rgb(254,194,111)]"></div>
+                            </div>
+                        </div>
+
+                        <!-- Orbit 2 (Inner) -->
+                        <div class="absolute inset-[-0.75rem] sm:inset-[-1rem] rounded-full border border-darkGray/20">
+                            <!-- Spinning container for Orbit 2 dot -->
+                            <div class="absolute inset-0 rounded-full animate-erratic-orbit-reverse">
+                                <!-- Blue dot left -->
+                                <div
+                                    class="absolute top-[30%] -left-1 w-2 h-2 sm:w-2 sm:h-2 bg-blue rounded-full shadow-[0_0_10px_rgb(36,166,232)]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image -->
+                        <div
+                            class="relative w-full h-full rounded-full border-[3px] border-[#2D3748] shadow-[0_1px_85px_-28px_rgb(168,126,250)] z-10 overflow-hidden group cursor-pointer bg-[#10171F]">
+                            <img src="./static/images/me/atanu.jpg" alt="Atanu Roy"
+                                class="w-full h-full object-cover rounded-full scale-[1.15] group-hover:scale-100 transition-transform duration-500" loading="lazy" />
+                        </div>
                     </div>
                 </div>
                 <h1 data-aos="fade-in" data-aos-delay="50"
@@ -95,16 +215,19 @@
                         class="text-green">oy</span>
                 </h1>
                 <h3 data-aos="fade-in" data-aos-delay="100" class="text-lg md:text-2xl font-JetBrains font-thin">
-                    <span><i class="fa fa-greater-than text-purple"></i></span>
+                    <span><i class="fa fa-greater-than text-purple text-base"></i></span>
                     <span id="hero-role-typing"></span>
                 </h3>
                 <div data-aos="fade-up" data-aos-delay="600"
-                    class="flex mt-6 sm:mt-5 md:mt-7 justify-center items-center text-2xl">
-                    <a href="https://www.linkedin.com/in/mr-atanu-roy/" target="_blank" class="ml-6 sm:ml-12"><i
-                            class="fa fa-linkedin-square hover:text-blue transition-colors duration-200"></i></a>
-                    <a href="https://github.com/Mr-Atanu-Roy" target="_blank"><i
-                            class="fa fa-github mx-4 hover:text-purple transition-colors duration-200"></i></a>
-
+                    class="flex mt-8 sm:mt-10 justify-center items-center gap-4">
+                    <a href="#works"
+                        class="px-5 py-2.5 sm:px-6 sm:py-3 bg-purple hover:bg-white text-black font-semibold rounded-full transition-colors duration-300 flex items-center justify-center gap-2 text-sm sm:text-base shadow-lg shadow-purple/20">
+                        My Works <i class="fa fa-greater-than"></i>
+                    </a>
+                    <a href="#blogs"
+                        class="px-5 py-2.5 sm:px-6 sm:py-3 border border-darkGray/50 bg-[#1A222C]/80 hover:bg-darkGray/30 text-gray hover:text-white font-medium rounded-full transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base backdrop-blur-sm">
+                        <i class="fa fa-file-text-o"></i> Blogs
+                    </a>
                 </div>
             </div>
             <div data-aos="fade-down" data-aos-delay="850"
@@ -888,7 +1011,7 @@
 
     <div class="w-full flex justify-center items-center">
         <div id="contactMeContainer"
-            class="fixed -bottom-96 sm:-bottom-[13.55rem] w-full sm:max-w-[86%]  md:max-w-[26.5rem] lg:max-w-xl 2xl:max-w-2xl mx-auto bg-bgColor2 sm:rounded-md sm:rounded-b-none sm:border sm:border-purple border-b-0 sm:border-b-0 pb-4 shadow-[0_1px_85px_-28px_rgb(168,126,250)] transition-all duration-700"
+            class="fixed -bottom-96 sm:-bottom-[13.55rem] w-full sm:max-w-[86%]  md:max-w-[26.5rem] lg:max-w-xl 2xl:max-w-2xl mx-auto bg-bgColor2 sm:rounded-3xl sm:rounded-b-none sm:border sm:border-purple border-b-0 sm:border-b-0 pb-4 shadow-[0_1px_85px_-28px_rgb(168,126,250)] transition-all duration-700"
             style="z-index: 9999999;">
 
             <div class="cursor-pointer border-b border-darkGray flex items-center justify-between">
@@ -908,7 +1031,7 @@
             </div>
 
             <div class="px-4 mt-6">
-                <p class="font-JetBrains font-light text-darkGray text-xs">//I will get back to you soon</p>
+                <p class="font-JetBrains font-light text-darkGray text-xs">// I'll get back to you soon</p>
                 <form id="contactForm" class="mt-5 font-JetBrains font-light" method="post">
                     <div class="flex items-center">
                         <label for="name" class="text-sm"><span class="relative -top-1">*</span>Name</label>
@@ -929,11 +1052,12 @@
                         <span class="ml-1.5 mr-3 text-[0.5rem] mt-1.5">................</span>
                         <input type="text" name="phone" id="phone" inputmode="numeric"
                             class="bg-transparent border-none outline-none placeholder:text-darkGray placeholder:text-sm"
+                            class="bg-transparent border-none outline-none placeholder:text-darkGray placeholder:text-sm"
                             placeholder="{Enter}">
                     </div>
                     <div class="my-1 flex items-center">
                         <label for="email" class="text-sm"><span class="relative -top-1">*</span>Message</label>
-                        <span class="ml-1.5 mr-3 text-[0.5rem] mt-1.5">................</span>
+                        <span class="ml-1.5 mr-3 text-[0.5rem] mt-1.5">...........</span>
                         <input type="text" name="message" id="message"
                             class="bg-transparent border-none outline-none placeholder:text-darkGray placeholder:text-sm"
                             placeholder="{Enter}">
@@ -1234,9 +1358,9 @@
     <!-- Pageclip form  -->
 
     <!-- custom scripts  -->
-    <script src="./static/js/main.js"></script>
-    <script src="./static/js/contact.js"></script>
-    <script src="./static/js/contact_form.js"></script>
+    <script src="./static/js/main.js" defer></script>
+    <script src="./static/js/contact.js" defer></script>
+    <script src="./static/js/contact_form.js" defer></script>
 </body>
 
 </html>

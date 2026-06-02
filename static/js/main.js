@@ -65,7 +65,7 @@ try {
 
 //typing animation
 try {
-    var typed3 = new Typed("#hero-role-typing", {
+    var heroTyped = new Typed("#hero-role-typing", {
         strings: [
             '<span class="text-yellow">ML</span> engineer',
             '<span class="text-green">Python</span> developer',
@@ -95,4 +95,18 @@ try {
 } catch (error) {
     console.log("Error occurred");
     console.log(error);
+}
+
+// Header toggle for mobile devices
+function toggleMobileMenu() {
+    const menu = document.getElementById("mobile-menu");
+    if (menu.classList.contains("opacity-0")) {
+        menu.classList.remove("opacity-0", "pointer-events-none");
+        menu.classList.add("opacity-100", "pointer-events-auto");
+        document.body.style.overflow = "hidden";
+    } else {
+        menu.classList.remove("opacity-100", "pointer-events-auto");
+        menu.classList.add("opacity-0", "pointer-events-none");
+        document.body.style.overflow = "auto";
+    }
 }
