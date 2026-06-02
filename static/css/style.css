@@ -663,6 +663,30 @@ video {
   top: 6%;
 }
 
+.top-\[14\%\]{
+  top: 14%;
+}
+
+.top-\[11\%\]{
+  top: 11%;
+}
+
+.-left-2{
+  left: -0.5rem;
+}
+
+.-left-20{
+  left: -5rem;
+}
+
+.-left-4{
+  left: -1rem;
+}
+
+.-left-1\.5{
+  left: -0.375rem;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -829,6 +853,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
 .block{
   display: block;
 }
@@ -948,6 +976,10 @@ video {
 
 .w-px{
   width: 1px;
+}
+
+.w-36{
+  width: 9rem;
 }
 
 .-rotate-90{
@@ -1274,8 +1306,8 @@ video {
   font-size: 0.66rem;
 }
 
-.text-\[1\.9rem\]{
-  font-size: 1.9rem;
+.text-\[1\.5rem\]{
+  font-size: 1.5rem;
 }
 
 .text-base{
@@ -1298,6 +1330,16 @@ video {
   line-height: 1rem;
 }
 
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -1308,10 +1350,6 @@ video {
 
 .font-thin{
   font-weight: 100;
-}
-
-.font-medium{
-  font-weight: 500;
 }
 
 .capitalize{
@@ -1361,6 +1399,21 @@ video {
 .text-yellow{
   --tw-text-opacity: 1;
   color: rgb(254 194 111 / var(--tw-text-opacity, 1));
+}
+
+.text-emerald-50{
+  --tw-text-opacity: 1;
+  color: rgb(236 253 245 / var(--tw-text-opacity, 1));
+}
+
+.text-emerald-500{
+  --tw-text-opacity: 1;
+  color: rgb(16 185 129 / var(--tw-text-opacity, 1));
+}
+
+.text-rose-500{
+  --tw-text-opacity: 1;
+  color: rgb(244 63 94 / var(--tw-text-opacity, 1));
 }
 
 .shadow{
@@ -1542,9 +1595,9 @@ video {
     flex-direction: row;
   }
 
-  .xs\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .xs\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .xs\:text-lg{
@@ -1705,9 +1758,9 @@ video {
     text-align: left;
   }
 
-  .sm\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
+  .sm\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .sm\:text-sm{
@@ -1771,8 +1824,8 @@ video {
     line-height: 2rem;
   }
 
-  .md\:text-\[3\.5rem\]{
-    font-size: 3.5rem;
+  .md\:text-\[3rem\]{
+    font-size: 3rem;
   }
 
   .md\:hover\:shadow-\[0_1px_20px_0\.5px_rgb\(168\2c 126\2c 250\)\]:hover{
@@ -1865,8 +1918,8 @@ video {
     line-height: 2.25rem;
   }
 
-  .lg\:text-7xl{
-    font-size: 4.5rem;
+  .lg\:text-6xl{
+    font-size: 3.75rem;
     line-height: 1;
   }
 

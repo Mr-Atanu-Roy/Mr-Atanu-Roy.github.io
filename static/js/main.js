@@ -24,7 +24,7 @@ try {
         });
     }
 } catch (error) {
-    console.log("Error ocurred");
+    console.log("Error occurred");
     console.log(error);
 }
 
@@ -35,74 +35,43 @@ try {
         "./static/js/particlesjs-config.json",
         function () {
             console.log("particles.js config loaded-1");
-        }
+        },
     );
     particlesJS.load(
         "expertise",
         "./static/js/particlesjs-config.json",
         function () {
             console.log("particles.js config loaded-2");
-        }
+        },
     );
     particlesJS.load(
         "works",
         "./static/js/particlesjs-config.json",
         function () {
             console.log("particles.js config loaded-3");
-        }
+        },
     );
     particlesJS.load(
         "education",
         "./static/js/particlesjs-config.json",
         function () {
             console.log("particles.js config loaded-4");
-        }
+        },
     );
 } catch (error) {
-    console.log("Error ocurred");
+    console.log("Error occurred");
     console.log(error);
 }
 
 //typing animation
 try {
-    var typed1 = new Typed("#typing1", {
+    var typed3 = new Typed("#hero-role-typing", {
         strings: [
-            '<span class="text-blue">print</span><span>&#40;</span><span class="text-green">"Welcome Everyone !!!"</span><span>&#41;</span>',
-            '<span class="text-green">"Welcome Everyone !!!"</span>',
-            '<span class="text-blue">console.log</span><span>&#40;</span><span class="text-green">"Welcome Everyone !!!"</span><span>&#41;</span>',
-            '<span class="text-green">"Welcome Everyone !!!"</span>',
-            '<span class="text-blue">printf</span><span>&#40;</span><span class="text-green">"Welcome Everyone !!!"</span><span>&#41;</span>&#59;',
-            '<span class="text-blue">cout </span><span>&#8810;</span><span class="text-green"> "Welcome Everyone !!!"</span>&#59;',
-            '<span class="text-green">"Welcome Everyone !!!"</span>',
-            '<span class="text-blue">echo </span><span class="text-green">"Welcome Everyone !!!"</span>&#59;',
-            '<span class="text-blue">System.out.println</span><span>&#40;</span><span class="text-green">"Welcome Everyone !!!"</span><span>&#41;</span>&#59;',
-        ],
-        typeSpeed: 50,
-        backSpeed: 35,
-        loop: true,
-        loopCount: Infinity,
-        shuffle: true,
-    });
-    var typed2 = new Typed("#typing2", {
-        strings: [
-            'I<span class="text-yellow">&#39;</span>m <span class="text-blue">A</span>tanu R<span class="text-green">oy</span>',
-            'I<span class="text-yellow">&#39;</span>m <span class="text-blue">A</span>tanu',
-            'I<span class="text-yellow">&#39;</span>m <span class="text-blue">A</span>tanu R<span class="text-green">oy</span>',
-            'I<span class="text-yellow">&#39;</span>m',
-            'I<span class="text-yellow">&#39;</span>m <span class="text-blue">A</span>tanu R<span class="text-green">oy</span>',
-        ],
-        typeSpeed: 150,
-        backSpeed: 65,
-        loop: true,
-        loopCount: Infinity,
-    });
-    var typed3 = new Typed("#typing3", {
-        strings: [
-            '<span class="text-yellow">smart</span> engineer',
-            '<span class="text-green">modern</span> web developer',
-            '<span class="text-yellow">ML</span> enthusiast',
-            '<span class="text-blue">AI</span> explorer',
-            '<span class="text-green">creative</span> designer',
+            '<span class="text-yellow">ML</span> engineer',
+            '<span class="text-green">Python</span> developer',
+            '<span class="text-blue">Backend</span> developer',
+            '<span class="text-emerald-500">AI</span> enthusiast',
+            '<span class="text-rose-500">Blog</span> Writer',
         ],
         typeSpeed: 100,
         backSpeed: 50,
@@ -110,7 +79,7 @@ try {
         loopCount: Infinity,
     });
 } catch (error) {
-    console.log("Error ocurred");
+    console.log("Error occurred");
     console.log(error);
 }
 
@@ -124,6 +93,6 @@ try {
         });
     });
 } catch (error) {
-    console.log("Error ocurred");
+    console.log("Error occurred");
     console.log(error);
 }
