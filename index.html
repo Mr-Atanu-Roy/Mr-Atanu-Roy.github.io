@@ -62,6 +62,7 @@
 </head>
 
 <body>
+    <!-- Desktop navigation menu -->
     <header class="sm:fixed top-0 left-0 bg-none p-5 lg:p-7 flex items-center justify-between w-full z-[60]">
         <!-- logo text -->
         <a href="/"
@@ -69,7 +70,6 @@
                 class="text-purple hover:text-purple text-5xl relative -left-1.5">.</span></a>
         <!-- logo text -->
 
-        <!-- Desktop navigation menu -->
         <nav data-aos="fade-down" data-aos-delay="150"
             class="hidden md:flex items-center justify-center z-50 bg-surface/90 border border-[#2D3748] rounded-full px-2 py-2 shadow-lg backdrop-blur-sm">
             <ul class="flex items-center text-sm font-light text-gray">
@@ -118,9 +118,8 @@
             <span class="w-[18px] h-[2px] bg-gray rounded-full"></span>
         </button>
         <!-- hamburger menu open icon for mobile -->
-
-        <!-- Desktop navigation menu -->
     </header>
+    <!-- Desktop navigation menu -->
 
     <!-- mobile menu -->
     <div id="mobile-menu"
@@ -179,10 +178,11 @@
         </div>
         <!-- social icons bottom -->
 
-        <!-- mobile menu -->
     </div>
+    <!-- mobile menu -->
 
     <main class="px-5 sm:p-8 md:px-12 lg:px-16 2xl:px-24">
+        <!-- hero section -->
         <section id="hero" class="mb-16 h-screen w-full flex flex-col justify-center relative">
             <div class="text-center w-full">
                 <!-- Image and orbits -->
@@ -273,195 +273,225 @@
             </div>
             <!-- bouncing scroll down arrow -->
         </section>
+        <!-- hero section -->
 
-        <section id="expertise" class="my-12 min-h-screen flex items-center justify-center">
-            <div class="flex flex-col items-stretch lg:items-start lg:flex-row">
-                <div
-                    class="border border-darkGray w-full border-b-0 lg:border lg:border-r-0 px-6 py-10 sm:px-10 sm:py-12 2xl:w-[36%]">
-                    <img src="./static/images/icons/expertise.png" alt="" class="w-12" />
-                    <div class="text-lg flex items-baseline justify-start">
-                        <span class="mr-0.5 text-purple">#</span>
-                        <span>My Expertise</span>
-                        <span class="text-[0.5rem] ml-0.5 mt-1.5">......... </span>
-                    </div>
-                    <p class="font-JetBrains mt-10 font-thin text-sm text-justify sm:text-left">
-                        Through constant learning I have
-                        got proficient in modern frameworks
-                        like Django, React, and
-                        Scikit-learn, with a strong grasp of API design, data handling, and deployment workflows.
-                        Skilled at bridging software
-                        engineering with data science from backend logic and RESTful integration to model training and
-                        end-to-end
-                        implementation.
-                    </p>
-
-                    <div class="pt-14" data-aos="zoom-in" data-aos-delay="450">
-                        <a href="#works"
-                            class="flex items-center justify-center w-fit mr-4 font-light bg-none capitalize shadow-none hover:bg-[#151c26] py-1.5 px-5 text-sm rounded-full cursor-pointer transition-all duration-500 animate_arrow">
-                            my works
-                            <img src="./static/images/icons/squiggly-arrow_purple.png"
-                                class="relative top-0 left-0 w-10 rotate-90 ml-1 transition-all duration-200" alt="" />
-                        </a>
-                    </div>
+        <!-- about section -->
+        <section id="about" class="my-12 md:my-20 min-h-screen flex flex-col justify-center relative">
+            <div class="w-full">
+                <div data-aos="fade-up">
+                    <h2 class="text-3xl md:text-[3rem] lg:text-5xl font-bold mb-3 text-white">About Me<span
+                            class="text-purple relative -left-1.5">.</span></h2>
+                    <p class="text-gray mb-10 text-sm md:text-base font-JetBrains font-thin">A bit about who I am and
+                        what I work with.</p>
                 </div>
-                <div
-                    class="border border-darkGray py-7 px-4 sm:px-7 sm:py-12 md:px-10 m-0 lg:max-w-[62%] xl:max-w-[71%]">
-                    <div class="mb-8 md:mb-10 expertise-box">
-                        <p class="text-lg border border-x-0 border-t-0 border-b-purple text-darkGray capitalize">
-                            //Skills
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Journey Card -->
+                    <div data-aos="fade-up" data-aos-delay="100"
+                        class="lg:col-span-2 bg-surface/75 bg-gradient-to-br from-purple/5 to-transparent border border-[#2D3748] rounded-2xl p-6 sm:p-8 flex flex-col justify-center relative overflow-hidden group">
+                        <div class="flex items-center text-purple mb-4 text-xs font-semibold tracking-widest uppercase">
+                            <i class="fa fa-star-o mr-2 text-sm"></i> JOURNEY
+                        </div>
+                        <p class="text-gray text-sm sm:text-base leading-relaxed mb-4 font-JetBrains font-medium">
+                            Full-stack engineer and ML Enthusiast with <strong class="text-white">4+ years</strong> of
+                            experience building production web apps end-to-end — strongest on the backend (Django,
+                            Python, Real-time APIs), and comfortable across the stack with React, Machine Learning, and
+                            deployment infrastructure.
                         </p>
-                        <div
-                            class="flex items-center justify-center sm:justify-evenly flex-wrap mt-3.5 text-[0.66rem] xxs:text-xs xs:text-sm text-black font-JetBrains font-bold">
-                            <div data-aos="zoom-in"
-                                class="capitalize flex items-center justify-evenly px-1.5 my-2 mx-1.5 w-28 xxs:m-2 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-[9.75rem] sm:w-48 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/web-dev.png" alt="frontend development" loading="lazy"
-                                    class="mr-1 w-[1.6rem] xxs:mr-1.5 xxs:w-7 xs:w-10" />
-                                <span>Frontend Development</span>
+                        <p class="text-gray text-sm sm:text-base leading-relaxed font-JetBrains font-thin">
+                            I love bridging design and engineering — turning complex requirements into robust backends
+                            and smooth, intuitive interfaces. Currently exploring AI-powered developer tools and
+                            integrating ML models into production web applications.
+                        </p>
+                    </div>
+
+                    <!-- Experience Card -->
+                    <div data-aos="fade-up" data-aos-delay="200"
+                        class="lg:col-span-1 bg-surface/75 bg-gradient-to-br from-purple/5 to-transparent border border-[#2D3748] rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center relative overflow-hidden group">
+                        <i class="fa fa-calendar-o text-purple text-2xl mb-4"></i>
+                        <h3 class="text-6xl font-bold text-purple mb-2 font-JetBrains">4+</h3>
+                        <p class="text-gray text-sm font-JetBrains font-thin">Years of Experience</p>
+                        <i
+                            class="fa fa-clock-o absolute -bottom-10 -right-10 text-[10rem] text-white/5 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></i>
+                    </div>
+
+                    <!-- Tech Stack Card -->
+                    <div data-aos="fade-up" data-aos-delay="300"
+                        class="lg:col-span-2 bg-surface/75 bg-gradient-to-br from-purple/5 to-transparent border border-[#2D3748] rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+                        <div class="flex items-center text-purple mb-6 text-xs font-semibold tracking-widest uppercase">
+                            <i class="fa fa-code mr-2 text-sm"></i> TECH STACK
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                            <!-- AI & ML -->
+                            <div class="bg-surface border border-[#2D3748]/50 rounded-xl p-4">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div
+                                        class="flex items-center text-[10px] sm:text-xs font-bold text-white tracking-widest uppercase bg-[#222B36] bg-gradient-to-r from-yellow/20 to-transparent border border-yellow/20 px-3 py-1.5 rounded-full">
+                                        <div class="w-2 h-2 rounded-full bg-yellow mr-2"></div> AI & ML
+                                    </div>
+                                    <span class="text-[#465364] text-xs font-JetBrains">01</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="https://pytorch.org/docs/stable/index.html" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg"
+                                            alt="PyTorch" class="w-3.5 h-3.5 mr-1.5" /> PyTorch
+                                    </a>
+                                    <a href="https://scikit-learn.org/stable/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+                                            alt="scikit-learn" class="w-3.5 h-3.5 mr-1.5" /> scikit-learn
+                                    </a>
+                                    <a href="https://huggingface.co/docs" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="Hugging Face"
+                                            class="w-3.5 h-3.5 mr-1.5" /> Hugging Face
+                                    </a>
+                                    <a href="https://pandas.pydata.org/docs/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg"
+                                            alt="Pandas" class="w-3.5 h-3.5 mr-1.5" /> Pandas
+                                    </a>
+                                    <a href="https://numpy.org/doc/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg"
+                                            alt="NumPy" class="w-3.5 h-3.5 mr-1.5" /> NumPy
+                                    </a>
+                                    <a href="https://matplotlib.org/stable/contents.html" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg"
+                                            alt="Matplotlib" class="w-3.5 h-3.5 mr-1.5" /> Matplotlib
+                                    </a>
+                                </div>
                             </div>
-                            <div data-aos="zoom-in" data-aos-delay="100"
-                                class="capitalize flex items-center justify-evenly px-1.5 my-2 mx-1.5 w-28 xxs:m-2 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-[9.75rem] sm:w-48 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/backend.png" alt="backend development" loading="lazy"
-                                    class="mr-1 w-[1.6rem] xxs:mr-1.5 xxs:w-7 xs:w-10" />
-                                <span>Backend Development</span>
+
+                            <!-- Backend & DB -->
+                            <div class="bg-surface border border-[#2D3748]/50 rounded-xl p-4">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div
+                                        class="flex items-center text-[10px] sm:text-xs font-bold text-white tracking-widest uppercase bg-[#222B36] bg-gradient-to-r from-blue/20 to-transparent border border-blue/20 px-3 py-1.5 rounded-full">
+                                        <div class="w-2 h-2 rounded-full bg-blue mr-2"></div> BACKEND & DB
+                                    </div>
+                                    <span class="text-[#465364] text-xs font-JetBrains">02</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="https://docs.djangoproject.com/en/stable/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.simpleicons.org/django/ffffff" alt="Django"
+                                            class="w-3.5 h-3.5 mr-1.5" /> Django
+                                    </a>
+                                    <a href="https://docs.python.org/3/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                                            alt="Python" class="w-3.5 h-3.5 mr-1.5" /> Python
+                                    </a>
+                                    <a href="https://www.django-rest-framework.org/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="./static/images/icons/drf.png" alt="DRF"
+                                            class="w-3.5 h-3.5 mr-1.5 object-contain" /> DRF
+                                    </a>
+                                    <a href="https://docs.celeryq.dev/en/stable/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="./static/images/icons/celery.png" alt="Celery"
+                                            class="w-3.5 h-3.5 mr-1.5 object-contain" /> Celery
+                                    </a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+                                        target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="./static/images/icons/websockets.png" alt="WebSockets"
+                                            class="w-3.5 h-3.5 mr-1.5 object-contain" /> WebSockets
+                                    </a>
+                                    <a href="https://dev.mysql.com/doc/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                                            alt="MySQL" class="w-3.5 h-3.5 mr-1.5" /> MySQL
+                                    </a>
+                                </div>
                             </div>
-                            <div data-aos="zoom-in" data-aos-delay="200"
-                                class="capitalize flex items-center justify-evenly px-1.5 my-2 mx-1.5 w-28 xxs:m-2 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-[9.75rem] sm:w-48 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/api.png" alt="api development" loading="lazy"
-                                    class="mr-1 w-[1.6rem] xxs:mr-1.5 xxs:w-7 xs:w-10" />
-                                <span>RESTful API Development</span>
+
+                            <!-- Frontend -->
+                            <div class="bg-surface border border-[#2D3748]/50 rounded-xl p-4">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div
+                                        class="flex items-center text-[10px] sm:text-xs font-bold text-white tracking-widest uppercase bg-[#222B36] bg-gradient-to-r from-green/20 to-transparent border border-green/20 px-3 py-1.5 rounded-full">
+                                        <div class="w-2 h-2 rounded-full bg-green mr-2"></div> FRONTEND
+                                    </div>
+                                    <span class="text-[#465364] text-xs font-JetBrains">03</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                                            alt="JavaScript" class="w-3.5 h-3.5 mr-1.5" /> JS
+                                    </a>
+                                    <a href="https://react.dev/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+                                            alt="React" class="w-3.5 h-3.5 mr-1.5" /> React
+                                    </a>
+                                    <a href="https://tailwindcss.com/docs" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                                            alt="TailwindCSS" class="w-3.5 h-3.5 mr-1.5" /> TailwindCSS
+                                    </a>
+                                </div>
                             </div>
-                            <div data-aos="zoom-in" data-aos-delay="150"
-                                class="capitalize flex items-center justify-evenly px-1.5 my-2 mx-1.5 w-28 xxs:m-2 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-[9.75rem] sm:w-48 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/da.png" alt="data analysis" loading="lazy"
-                                    class="mr-1 w-[1.6rem] xxs:mr-1.5 xxs:w-7 xs:w-10" />
-                                <span>Data Analysis</span>
+
+                            <!-- Deployment -->
+                            <div class="bg-surface border border-[#2D3748]/50 rounded-xl p-4">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div
+                                        class="flex items-center text-[10px] sm:text-xs font-bold text-white tracking-widest uppercase bg-[#222B36] bg-gradient-to-r from-purple/20 to-transparent border border-purple/20 px-3 py-1.5 rounded-full">
+                                        <div class="w-2 h-2 rounded-full bg-purple mr-2"></div> DEPLOYMENT
+                                    </div>
+                                    <span class="text-[#465364] text-xs font-JetBrains">04</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="https://docs.aws.amazon.com/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="./static/images/icons/aws.png" alt="AWS"
+                                            class="w-3.5 h-3.5 mr-1.5 object-contain" /> AWS
+                                    </a>
+                                    <a href="https://kernel.org/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+                                            alt="Linux" class="w-3.5 h-3.5 mr-1.5" /> Linux
+                                    </a>
+                                    <a href="https://docs.cpanel.net/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.simpleicons.org/cpanel/FF6C2C" alt="cPanel"
+                                            class="w-3.5 h-3.5 mr-1.5" /> cPanel
+                                    </a>
+                                    <a href="https://git-scm.com/doc" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                                            alt="Git" class="w-3.5 h-3.5 mr-1.5" /> Git
+                                    </a>
+                                    <a href="https://docs.github.com/" target="_blank"
+                                        class="flex items-center bg-[#222B36] hover:bg-darkGray/40 transition-colors border border-[#2D3748]/50 rounded-md px-2.5 py-1.5 text-xs text-gray hover:text-white">
+                                        <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"
+                                            class="w-3.5 h-3.5 mr-1.5" /> GitHub
+                                    </a>
+                                </div>
                             </div>
-                            <div data-aos="zoom-in" data-aos-delay="150"
-                                class="capitalize flex items-center justify-evenly px-1.5 my-2 mx-1.5 w-28 xxs:m-2 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-[9.75rem] sm:w-48 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/ml.png" alt="machine learning" loading="lazy"
-                                    class="mr-1 w-[1.6rem] xxs:mr-1.5 xxs:w-7 xs:w-10" />
-                                <span>Machine Learning</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="200"
-                                class="capitalize flex items-center justify-evenly px-1.5 my-2 mx-1.5 w-28 xxs:m-2 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-[9.75rem] sm:w-48 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/db.png" alt="db management" loading="lazy"
-                                    class="mr-1 w-[1.6rem] xxs:mr-1.5 xxs:w-7 xs:w-10" />
-                                <span>Database management</span>
-                            </div>
+
                         </div>
                     </div>
-                    <div class="mb-8 md:mb-10 expertise-box">
-                        <p class="text-lg border border-x-0 border-t-0 border-b-purple text-darkGray capitalize">
-                            //Programming languages
-                        </p>
-                        <div
-                            class="flex items-center justify-evenly flex-wrap mt-3.5 text-[0.66rem] xxs:text-sm text-black font-JetBrains font-bold">
-                            <div data-aos="zoom-in" data-aos-delay="50"
-                                class="capitalize flex items-center justify-evenly px-1.5 my-2 mx-1.5 w-28 xxs:m-2 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-[9.75rem] h-16 sm:w-44 bg-gray rounded-md">
-                                <img src="./static/images/icons/python.png" alt="python" loading="lazy"
-                                    class="mr-1 sm:mr-1.5 w-8 sm:w-10" />
-                                <span>Python</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="100"
-                                class="capitalize flex items-center justify-evenly px-1.5 my-2 mx-1.5 w-28 xxs:m-2 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-[9.75rem] h-16 sm:w-44 bg-gray rounded-md">
-                                <img src="./static/images/icons/js.png" alt="java script" loading="lazy"
-                                    class="mr-1 sm:mr-1.5 w-8 sm:w-10" />
-                                <span class="flex flex-col xs:flex-row"><span>Java</span><span>Script</span></span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="150"
-                                class="capitalize flex items-center justify-evenly px-1.5 my-2 mx-1.5 w-28 xxs:m-2 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-[9.75rem] h-16 sm:w-44 bg-gray rounded-md">
-                                <img src="./static/images/icons/php.png" alt="php" loading="lazy"
-                                    class="mr-1 sm:mr-1.5 w-10" />
-                                <span>PHP</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="expertise-box">
-                        <p class="text-lg border border-x-0 border-t-0 border-b-purple text-darkGray capitalize">
-                            //Technologies &#38; Frameworks
-                        </p>
-                        <div
-                            class="flex items-center justify-evenly flex-wrap mt-3.5 text-[0.66rem] xxs:text-xs sm:text-sm text-black font-JetBrains font-bold">
 
-                            <div data-aos="zoom-in" data-aos-delay="50"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 ml-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/django.png" alt="django" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-12 sm:w-16" />
-                                <span>Django</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="150"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 mr-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/drf.png" alt="drf" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-10 sm:w-12" />
-                                <span>Django Rest Framework</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="200"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 ml-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/react.png" alt="React" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-7 sm:w-10" />
-                                <span>React JS</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="200"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 ml-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/websockets.png" alt="websockets" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-10 sm:w-14" />
-                                <span>WebSockets</span>
-                            </div>
-
-                            <div data-aos="zoom-in" data-aos-delay="250"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 mr-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/model-training.png" alt="model training" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-12" />
-                                <span>Model Training</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="250"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 mr-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/deep-learning.png" alt="deep learning" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-12" />
-                                <span>Deep Learning</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="100"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 ml-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/tailwindcss.png" alt="tailwind" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-8 sm:w-10" />
-                                <span>Tailwind CSS</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="150"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 mr-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/mysql.png" alt="MySQL" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-12 sm:w-16" />
-                                <span>MySQL</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="250"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 mr-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/redis.png" alt="redis" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-8 sm:w-10" />
-                                <span>Redis</span>
-                            </div>
-
-                            <div data-aos="zoom-in" data-aos-delay="150"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 mr-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/nginx.png" alt="nginx" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-12 sm:w-16" />
-                                <span>Nginx</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="200"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 ml-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/hosting.png" alt="hosting" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-12" />
-                                <span>VPS, cPanel Hosting</span>
-                            </div>
-                            <div data-aos="zoom-in" data-aos-delay="250"
-                                class="capitalize flex items-center justify-evenly my-2 mx-1.5 w-28 xxs:m-2 mr-0 xs:m-2 px-1.5 xxs:px-2.5 sm:px-3 xxs:w-32 xs:w-36 sm:w-44 h-16 bg-gray rounded-md">
-                                <img src="./static/images/icons/git.png" alt="git" loading="lazy"
-                                    class="mr-1 xs:mr-1.5 w-7 sm:w-10" />
-                                <span>Git &#38; GitHub</span>
-                            </div>
-                        </div>
+                    <!-- Location Card -->
+                    <div data-aos="fade-up" data-aos-delay="400"
+                        class="lg:col-span-1 bg-surface/75 bg-gradient-to-br from-purple/5 to-transparent border border-[#2D3748] rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center relative overflow-hidden group">
+                        <i class="fa fa-map-marker motion-safe:animate-bounce text-purple text-3xl mb-4"></i>
+                        <h3 class="text-2xl font-bold text-white mb-2">India</h3>
+                        <p class="text-gray text-sm font-JetBrains font-thin">Available for remote work</p>
+                        <i
+                            class="fa fa-globe absolute -bottom-10 -right-10 text-[10rem] text-white/5 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></i>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- about section -->
 
         <section id="works" class="my-20 min-h-screen flex items-center justify-center">
             <div class="flex flex-col items-stretch lg:items-start lg:flex-row-reverse">
