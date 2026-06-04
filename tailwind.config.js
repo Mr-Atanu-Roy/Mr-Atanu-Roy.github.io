@@ -12,6 +12,7 @@ module.exports = {
                 darkGray: "#465364",
                 bgColor: "#10171F",
                 bgColor2: "#171E28",
+                surface: "#1A222C",
             },
             fontFamily: {
                 JetBrains: ["JetBrains Mono", "monospace"],

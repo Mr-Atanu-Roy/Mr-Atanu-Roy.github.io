@@ -63,11 +63,15 @@
 
 <body>
     <header class="sm:fixed top-0 left-0 bg-none p-5 lg:p-7 flex items-center justify-between w-full z-[60]">
-        <a href="/" class="text-2xl font-bold hover:text-white transition-colors duration-300 outlne-none">Atanu<span
+        <!-- logo text -->
+        <a href="/"
+            class="text-xl md:text-3xl font-bold hover:text-white transition-colors duration-300 outlne-none">Atanu<span
                 class="text-purple hover:text-purple text-5xl relative -left-1.5">.</span></a>
+        <!-- logo text -->
 
+        <!-- Desktop navigation menu -->
         <nav data-aos="fade-down" data-aos-delay="150"
-            class="hidden md:flex items-center justify-center z-50 bg-[#1A222C]/90 border border-[#2D3748] rounded-full px-2 py-2 shadow-lg backdrop-blur-sm">
+            class="hidden md:flex items-center justify-center z-50 bg-surface/90 border border-[#2D3748] rounded-full px-2 py-2 shadow-lg backdrop-blur-sm">
             <ul class="flex items-center text-sm font-light text-gray">
                 <li><a href="#hero"
                         class="px-3.5 py-2 hover:text-white transition-colors duration-300 capitalize">Home</a>
@@ -106,33 +110,44 @@
             </div>
         </nav>
 
+        <!-- hamburger menu open icon for mobile -->
         <button onclick="toggleMobileMenu()"
-            class="md:hidden flex flex-col items-center justify-center w-11 h-11 bg-[#1A222C]/80 rounded-full border border-darkGray/50 gap-[4px] cursor-pointer hover:bg-darkGray/30 transition-colors z-[60] backdrop-blur-sm">
+            class="md:hidden flex flex-col items-center justify-center w-9 h-9 bg-surface/80 rounded-full border border-darkGray/50 gap-[4px] cursor-pointer hover:bg-darkGray/30 transition-colors z-[60] backdrop-blur-sm">
             <span class="w-[18px] h-[2px] bg-gray rounded-full"></span>
             <span class="w-[18px] h-[2px] bg-gray rounded-full"></span>
             <span class="w-[18px] h-[2px] bg-gray rounded-full"></span>
         </button>
+        <!-- hamburger menu open icon for mobile -->
+
+        <!-- Desktop navigation menu -->
     </header>
 
+    <!-- mobile menu -->
     <div id="mobile-menu"
         class="fixed inset-0 bg-[#10171F] z-[100] flex flex-col opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
-        <div class="p-5 lg:p-7 flex items-center justify-between w-full">
-            <a href="/" onclick="toggleMobileMenu()"
-                class="text-2xl font-bold hover:text-white transition-colors duration-300">Atanu<span
-                    class="text-blue hover:text-blue text-5xl relative -left-1.5">.</span></a>
 
+        <div class="p-5 lg:p-7 flex items-center justify-between w-full">
+            <!-- logo text -->
+            <a href="/" onclick="toggleMobileMenu()"
+                class="text-xl font-bold hover:text-white transition-colors duration-300">Atanu<span
+                    class="text-purple hover:text-purple text-5xl relative -left-1.5">.</span></a>
+            <!-- logo text -->
+
+            <!-- close menu button -->
             <button onclick="toggleMobileMenu()"
-                class="flex items-center justify-center w-11 h-11 bg-[#1A222C]/80 rounded-full border border-darkGray/50 cursor-pointer hover:bg-darkGray/30 transition-colors">
+                class="flex items-center justify-center w-9 h-9 bg-surface/80 rounded-full border border-darkGray/50 cursor-pointer hover:bg-darkGray/30 transition-colors">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
                     stroke-linecap="round" stroke-linejoin="round" class="text-gray">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
                     <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
+            <!-- close menu button -->
         </div>
 
+        <!-- main menu links -->
         <div class="flex-1 flex flex-col items-center justify-center mb-24">
-            <ul class="flex flex-col items-center justify-center gap-7 text-2xl font-bold text-white">
+            <ul class="flex flex-col items-center justify-center gap-7 text-xl font-bold text-white">
                 <li><a href="#hero" class="hover:text-purple transition-colors" onclick="toggleMobileMenu()">Home</a>
                 </li>
                 <li><a href="#about" class="hover:text-purple transition-colors" onclick="toggleMobileMenu()">About</a>
@@ -143,12 +158,14 @@
                 </li>
                 <li class="mt-4">
                     <a href="#" onclick="toggleMobileMenu(); document.getElementById('header-contactMe-btn').click();"
-                        class="px-7 py-2.5 bg-purple text-black rounded-full font-normal hover:bg-white transition-colors text-xl">Contact
+                        class="px-5 py-2.5 bg-purple text-black rounded-full font-normal hover:bg-white transition-colors text-lg">Contact
                         me</a>
                 </li>
             </ul>
         </div>
+        <!-- main menu links -->
 
+        <!-- social icons bottom -->
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
             <div class="w-8 h-[1px] bg-darkGray mb-7"></div>
             <div class="flex items-center gap-6 text-gray">
@@ -160,12 +177,16 @@
                     class="hover:text-white transition-colors text-xl"><i class="fa fa-medium"></i></a>
             </div>
         </div>
+        <!-- social icons bottom -->
+
+        <!-- mobile menu -->
     </div>
 
     <main class="px-5 sm:p-8 md:px-12 lg:px-16 2xl:px-24">
-        <section id="hero" class="mb-16 h-screen w-full">
-            <div class="text-center relative top-[11%] xs:top-[14%] left-0">
-                <div class="flex items-center justify-center mb-10 mt-4 sm:mt-0 relative">
+        <section id="hero" class="mb-16 h-screen w-full flex flex-col justify-center relative">
+            <div class="text-center w-full">
+                <!-- Image and orbits -->
+                <div class="flex items-center justify-center mb-16 relative">
                     <div class="relative w-44 h-44 sm:w-52 sm:h-52 flex items-center justify-center" data-aos="zoom-in"
                         data-aos-delay="100">
                         <!-- Orbit 1 (Outer) -->
@@ -212,34 +233,45 @@
                         </div>
                     </div>
                 </div>
+                <!-- Image and orbits -->
+
+                <!-- main text -->
                 <h1 data-aos="fade-in" data-aos-delay="50"
-                    class="text-2xl sm:text-4xl md:text-[3rem] lg:text-6xl font-bold to-purple mb-5">
+                    class="text-xl sm:text-3xl md:text-[3rem] lg:text-5xl font-bold to-purple mb-5">
                     Hi, I<span class="text-yellow">&#39;</span>m <span class="text-blue">A</span>tanu R<span
                         class="text-green">oy</span>
                 </h1>
-                <h3 data-aos="fade-in" data-aos-delay="100" class="text-lg md:text-2xl font-JetBrains font-thin">
+                <!-- main text -->
+
+                <!-- typing animating text -->
+                <h3 data-aos="fade-in" data-aos-delay="100"
+                    class="text-base md:text-lg lg:text-xl font-JetBrains font-thin">
                     <span><i class="fa fa-greater-than text-purple text-base"></i></span>
                     <span id="hero-role-typing"></span>
                 </h3>
-                <div data-aos="fade-up" data-aos-delay="600"
-                    class="flex mt-8 sm:mt-10 justify-center items-center gap-4">
-                    <a href="#works"
-                        class="px-5 py-2.5 sm:px-6 sm:py-3 bg-purple hover:bg-white text-black font-semibold rounded-full transition-colors duration-300 flex items-center justify-center gap-2 text-sm sm:text-base shadow-lg shadow-purple/20">
+                <!-- typing animating text -->
+
+                <!-- 2 buttons -->
+                <div class="flex mt-8 sm:mt-10 justify-center items-center gap-4">
+                    <a href="#works" data-aos="zoom-in" data-aos-delay="500"
+                        class="px-4 py-2.5 sm:px-6 sm:py-3 bg-purple hover:bg-white text-black font-semibold rounded-full transition-colors duration-300 flex items-center justify-center gap-1.5 text-xs sm:text-sm shadow-lg shadow-purple/20">
                         My Works <i class="fa fa-greater-than"></i>
                     </a>
-                    <a href="#blogs"
-                        class="px-5 py-2.5 sm:px-6 sm:py-3 border border-darkGray/50 bg-[#1A222C]/80 hover:bg-darkGray/30 text-gray hover:text-white font-medium rounded-full transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base backdrop-blur-sm">
+                    <a href="#blogs" data-aos="zoom-in" data-aos-delay="750"
+                        class="px-4 py-2 sm:px-6 sm:py-3 border border-darkGray/50 bg-surface/80 hover:bg-darkGray/30 text-gray hover:text-white font-medium rounded-full transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base backdrop-blur-sm">
                         <i class="fa fa-file-text-o"></i> Blogs
                     </a>
                 </div>
+                <!-- 2 buttons -->
             </div>
-            <div data-aos="fade-down" data-aos-delay="850"
-                class="z-50 flex items-center justify-center absolute bottom-20 left-[46%] sm:left-1/2"
+            <!-- bouncing scroll down arrow -->
+            <div data-aos="fade-down" data-aos-delay="850" class="z-50 flex items-center justify-center mt-10"
                 id="hero-slide-arrow">
                 <a href="#expertise">
                     <img src="./static/images/icons/squiggly-arrow_purple.png" alt="" class="w-10 cursor-pointer" />
                 </a>
             </div>
+            <!-- bouncing scroll down arrow -->
         </section>
 
         <section id="expertise" class="my-12 min-h-screen flex items-center justify-center">
@@ -1012,6 +1044,7 @@
         </div>
     </footer>
 
+    <!-- Contact form -->
     <div class="w-full flex justify-center items-center">
         <div id="contactMeContainer"
             class="fixed -bottom-96 sm:-bottom-[13.55rem] w-full sm:max-w-[86%]  md:max-w-[26.5rem] lg:max-w-xl 2xl:max-w-2xl mx-auto bg-bgColor2 sm:rounded-3xl sm:rounded-b-none sm:border sm:border-purple border-b-0 sm:border-b-0 pb-4 shadow-[0_1px_85px_-28px_rgb(168,126,250)] transition-all duration-700"
@@ -1346,6 +1379,7 @@
 
         </div>
     </div>
+    <!-- Contact form -->
 
     <!-- scroll animation js  -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
