@@ -3,6 +3,15 @@ module.exports = {
     content: ["./index.html", "./static/js/**/*.js"],
     theme: {
         extend: {
+            keyframes: {
+                "arrow-float": {
+                    "0%, 100%": { transform: "translateY(0)" },
+                    "50%": { transform: "translateY(10px)" },
+                },
+            },
+            animation: {
+                "arrow-float": "arrow-float 1.8s infinite",
+            },
             colors: {
                 purple: "#A87EFA",
                 blue: "#24A6E8",

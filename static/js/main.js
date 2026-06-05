@@ -12,34 +12,17 @@ try {
 
 //particle js background animation
 try {
-    particlesJS.load(
-        "hero",
-        "./static/js/particlesjs-config.json",
-        function () {
-            console.log("particles.js config loaded-1");
-        },
-    );
-    particlesJS.load(
-        "expertise",
-        "./static/js/particlesjs-config.json",
-        function () {
-            console.log("particles.js config loaded-2");
-        },
-    );
-    particlesJS.load(
-        "works",
-        "./static/js/particlesjs-config.json",
-        function () {
-            console.log("particles.js config loaded-3");
-        },
-    );
-    particlesJS.load(
-        "education",
-        "./static/js/particlesjs-config.json",
-        function () {
-            console.log("particles.js config loaded-4");
-        },
-    );
+    ["hero", "about", "blogs", "contact"].forEach(function (sectionId) {
+        if (document.getElementById(sectionId)) {
+            particlesJS.load(
+                sectionId,
+                "./static/js/particlesjs-config.json",
+                function () {
+                    console.log("particles.js config loaded for " + sectionId);
+                },
+            );
+        }
+    });
 } catch (error) {
     console.log("Error occurred");
     console.log(error);
@@ -74,6 +57,17 @@ try {
             behavior: "smooth",
         });
     });
+} catch (error) {
+    console.log("Error occurred");
+    console.log(error);
+}
+
+// footer year
+try {
+    const footerYear = document.getElementById("footer-year");
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
+    }
 } catch (error) {
     console.log("Error occurred");
     console.log(error);

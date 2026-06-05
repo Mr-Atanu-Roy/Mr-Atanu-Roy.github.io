@@ -9,14 +9,29 @@ body {
     font-family: "Google Sans Mono Bold";
 }
 
-.particles-js-canvas-el {
-    position: absolute !important;
-    z-index: -9999 !important;
+.section-padding {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
 }
 
-#hero .particles-js-canvas-el {
-    top: 0 !important;
-    left: 0 !important;
+@media (max-width: 768px) {
+    .section-padding {
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
+    }
+}
+
+.particles-js-canvas-el {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+}
+
+.particle-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
 }
 
 .animate_arrow {
@@ -57,24 +72,6 @@ body {
     top: 0;
     bottom: 0;
     left: 1.2rem;
-}
-
-@keyframes arrow_animations {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(12px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-#hero-slide-arrow img,
-#scrollTopBtn img {
-    rotate: 180deg;
-    animation: arrow_animations 1.8s infinite;
-    animation-delay: 0.8s;
 }
 
 body::-webkit-scrollbar {
@@ -281,19 +278,39 @@ body::-webkit-scrollbar-thumb {
 } /*# sourceMappingURL=custom_styles.css.map */
 
 @keyframes erratic-orbit {
-    0% { transform: rotate(0deg); }
-    20% { transform: rotate(100deg); }
-    50% { transform: rotate(150deg); }
-    70% { transform: rotate(280deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(100deg);
+    }
+    50% {
+        transform: rotate(150deg);
+    }
+    70% {
+        transform: rotate(280deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes erratic-orbit-reverse {
-    0% { transform: rotate(0deg); }
-    30% { transform: rotate(-120deg); }
-    60% { transform: rotate(-160deg); }
-    80% { transform: rotate(-300deg); }
-    100% { transform: rotate(-360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-120deg);
+    }
+    60% {
+        transform: rotate(-160deg);
+    }
+    80% {
+        transform: rotate(-300deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 .animate-erratic-orbit {
