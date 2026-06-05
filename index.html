@@ -63,6 +63,10 @@
 
 <body>
 
+    <!-- mouse gradient overlay -->
+    <div id="mouse-gradient-overlay"
+        class="pointer-events-none fixed inset-0 z-[100] transition-opacity duration-300 hidden md:block"></div>
+
     <!-- ? NOTE:  Main tag added for contact form to close when clicked outside -->
     <main>
 
@@ -77,17 +81,20 @@
 
             <nav
                 class="hidden md:flex items-center justify-center z-50 bg-surface/80 border border-[#2D3748] rounded-full px-2 py-2 shadow-lg backdrop-blur-sm">
-                <ul class="flex items-center text-sm font-light text-gray">
-                    <li><a href="#hero"
+                <ul class="flex items-center text-sm font-light text-gray relative">
+                    <div id="nav-active-pill"
+                        class="absolute bg-purple/20 rounded-full transition-all duration-300 ease-out opacity-0 pointer-events-none z-0">
+                    </div>
+                    <li class="relative z-10"><a href="#hero"
                             class="px-3.5 py-2 hover:text-white transition-colors duration-300 capitalize">Home</a>
                     </li>
-                    <li><a href="#about"
+                    <li class="relative z-10"><a href="#about"
                             class="px-3.5 py-2 hover:text-white transition-colors duration-300 capitalize">About</a>
                     </li>
-                    <li><a href="#works"
+                    <li class="relative z-10"><a href="#works"
                             class="px-3.5 py-2 hover:text-white transition-colors duration-300 capitalize">Works</a>
                     </li>
-                    <li><a href="#blogs"
+                    <li class="relative z-10"><a href="#blogs"
                             class="px-3.5 py-2 hover:text-white transition-colors duration-300 capitalize">Blogs</a>
                     </li>
                     <li>
@@ -521,9 +528,18 @@
         <!-- about section -->
 
         <!-- works section -->
-        <!-- <section id="works" class="section-padding px-4 md:px-8 max-w-7xl mx-auto">
+        <section id="works" class="particle-section section-padding px-4 md:px-8 max-w-7xl mx-auto">
+            <!-- works header and description -->
+            <div data-aos="fade-up">
+                <h2 class="text-3xl md:text-[3rem] lg:text-5xl font-bold mb-3 text-white">My Works<span
+                        class="text-purple relative -left-1.5">.</span></h2>
+                <p class="text-gray mb-10 text-sm md:text-base font-JetBrains font-thin">A selection of my recent
+                    projects, from full-stack applications to machine learning models.</p>
+            </div>
 
-        </section> -->
+            <!-- works cards -->
+            <div class="works-cards-grid grid grid-cols-1 gap-8"></div>
+        </section>
         <!-- works section -->
 
         <!-- blogs section -->
@@ -538,85 +554,7 @@
             <!-- blogs header and description -->
 
             <!-- blogs cards -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <a href="https://medium.com/@ar1995487/can-vision-transformers-replace-cnns-and-why-they-cant-108495bf53f5"
-                    target="_blank" data-aos="fade-up" data-aos-delay="100"
-                    class="group block bg-surface/50 bg-gradient-to-br from-purple/5 to-transparent border border-[#2D3748] hover:border-purple hover:shadow-[0_0_15px_rgba(168,126,250,0.15)] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3
-                            class="text-lg md:text-xl font-bold text-white group-hover:text-purple transition-colors duration-300 pr-4">
-                            Understanding Vision Transformers (ViT)</h3>
-                        <i
-                            class="fa fa-external-link text-gray group-hover:text-purple transition-colors duration-300 mt-1"></i>
-                    </div>
-                    <p class="text-gray text-sm mb-6 font-JetBrains font-thin line-clamp-3">
-                        Hey there, in this article we are going to explore and understand Vision Transformer a.k.a ViT
-                        in
-                        absolute...
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span
-                            class="px-3 py-1 bg-[#222B36] border border-[#2D3748]/50 text-xs font-JetBrains text-gray group-hover:text-purple rounded-full transition-colors duration-300">#Vision
-                            Transformers</span>
-                        <span
-                            class="px-3 py-1 bg-[#222B36] border border-[#2D3748]/50 text-xs font-JetBrains text-gray group-hover:text-purple rounded-full transition-colors duration-300">#Computer
-                            Vision</span>
-                        <span
-                            class="px-3 py-1 bg-[#222B36] border border-[#2D3748]/50 text-xs font-JetBrains text-gray group-hover:text-purple rounded-full transition-colors duration-300">#AI</span>
-                        <span
-                            class="px-3 py-1 bg-[#222B36] border border-[#2D3748]/50 text-xs font-JetBrains text-gray group-hover:text-purple rounded-full transition-colors duration-300">#Deep
-                            Learning</span>
-                    </div>
-
-                    <div
-                        class="w-full h-[1px] bg-[#2D3748] mb-4 group-hover:bg-purple/30 transition-colors duration-300">
-                    </div>
-
-                    <div class="flex items-center text-xs font-JetBrains text-gray gap-4">
-                        <span class="flex items-center gap-1.5"><i class="fa fa-calendar-o"></i> April 23, 2026</span>
-                        <span class="flex items-center gap-1.5"><i class="fa fa-clock-o"></i> 10 min read</span>
-                    </div>
-                </a>
-
-                <!-- Card 2 -->
-                <a href="https://medium.com/@ar1995487/understanding-encapsulation-in-python-public-protected-and-private-members-1e6d418e901f"
-                    target="_blank" data-aos="fade-up" data-aos-delay="200"
-                    class="group block bg-surface/50 bg-gradient-to-br from-purple/5 to-transparent border border-[#2D3748] hover:border-purple hover:shadow-[0_0_15px_rgba(168,126,250,0.15)] rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3
-                            class="text-lg md:text-xl font-bold text-white group-hover:text-purple transition-colors duration-300 pr-4">
-                            Understanding Encapsulation in Python: Public, Protected, and Private Members</h3>
-                        <i
-                            class="fa fa-external-link text-gray group-hover:text-purple transition-colors duration-300 mt-1"></i>
-                    </div>
-                    <p class="text-gray text-sm mb-6 font-JetBrains font-thin line-clamp-3">
-                        Encapsulation literally means: Bundling + Restricting Direct Access just like a capsule as shown
-                        in
-                        picture above...
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span
-                            class="px-3 py-1 bg-[#222B36] border border-[#2D3748]/50 text-xs font-JetBrains text-gray group-hover:text-purple rounded-full transition-colors duration-300">#Object
-                            Oriented</span>
-                        <span
-                            class="px-3 py-1 bg-[#222B36] border border-[#2D3748]/50 text-xs font-JetBrains text-gray group-hover:text-purple rounded-full transition-colors duration-300">#Python</span>
-                        <span
-                            class="px-3 py-1 bg-[#222B36] border border-[#2D3748]/50 text-xs font-JetBrains text-gray group-hover:text-purple rounded-full transition-colors duration-300">#Encapsulation</span>
-                    </div>
-
-                    <div
-                        class="w-full h-[1px] bg-[#2D3748] mb-4 group-hover:bg-purple/30 transition-colors duration-300">
-                    </div>
-
-                    <div class="flex items-center text-xs font-JetBrains text-gray gap-4">
-                        <span class="flex items-center gap-1.5"><i class="fa fa-calendar-o"></i> June 4, 2026</span>
-                        <span class="flex items-center gap-1.5"><i class="fa fa-clock-o"></i> 5 min read</span>
-                    </div>
-                </a>
-
-            </div>
-            <!-- blogs cards -->
+            <div class="blogs-cards-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </section>
         <!-- blogs section -->
 
@@ -1030,6 +968,13 @@
     <!-- Pageclip form  -->
 
     <!-- custom scripts  -->
+    <!-- data files (must load before loaders and main) -->
+    <script src="./static/js/data/project_data.js" defer></script>
+    <script src="./static/js/data/blogs_data.js" defer></script>
+    <!-- section loaders -->
+    <script src="./static/js/works_loader.js" defer></script>
+    <script src="./static/js/blogs_loader.js" defer></script>
+    <!-- main -->
     <script src="./static/js/main.js" defer></script>
     <script src="./static/js/contact.js" defer></script>
     <script src="./static/js/contact_form.js" defer></script>
